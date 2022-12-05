@@ -15,7 +15,7 @@ namespace SE_GymTrainer.tools
          
         private static readonly string sCnn = "Data Source=.\\sqlexpress;" +
             "Initial Catalog=GymTrainer;Integrated Security=True; " +
-            "User ID=sa; Password=SoDeJuRoSlaKaiFi.9803";
+            "User ID=YourUserHere; Password=YourPasswordHere";
 
         private static readonly string[] Querys =  {
             "SELECT [nick],[password] FROM [dbo].[user] WHERE [nick] = '{1}' and [password] = '{2}'",                                       //0
