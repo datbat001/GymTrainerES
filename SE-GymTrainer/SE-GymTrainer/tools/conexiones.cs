@@ -12,11 +12,12 @@ namespace SE_GymTrainer.tools
 {
     internal class conexiones
     {
-         
+        //String de conexion a nuestra base de datos
         private static readonly string sCnn = "Data Source=.\\sqlexpress;" +
             "Initial Catalog=GymTrainer;Integrated Security=True; " +
             "User ID=YourUserHere; Password=YourPasswordHere";
 
+        //Arreglo con varios Querys que se usaran en el programa
         private static readonly string[] Querys =  {
             "SELECT [nick],[password] FROM [dbo].[user] WHERE [nick] = '{1}' and [password] = '{2}'",                                       //0
             "INSERT INTO [dbo].[user] ([nick],[password],[email],[peso],[altura],[active],[Tipo]) VALUES ('{1}','{2}','{3}','{4}','{5}',0,1)",                  //1
@@ -27,6 +28,7 @@ namespace SE_GymTrainer.tools
             "SELECT  [peso],[altura] FROM [GymTrainer].[dbo].[user] Where [active] = 1",                                                    //6
             "SELECT [Tipo],[Body_Part],[Ejercicio],[Serie],[Repeticion] FROM [GymTrainer].[dbo].[ejercicios] WHERE [Tipo] = '{1}'"                 //7
         };
+        //Construccion del Query sacando los parametros
         private static string construyeQuery(params Object[] parametros)
         {
             string q = Querys[int.Parse(parametros[0].ToString())];
@@ -36,6 +38,7 @@ namespace SE_GymTrainer.tools
             }
             return q;
         }
+        //Elegimos el Query que necesitemos y lo ejecutamos
         private static void nonQuery(string q)
         {
             SqlConnection connection = new SqlConnection(sCnn);
@@ -44,6 +47,7 @@ namespace SE_GymTrainer.tools
             command.ExecuteNonQuery();
             connection.Close();
         }
+        //Metodo para Hacer un Login
         public static userModel Login(string usr, string clv)
         {
             userModel modelo = new userModel();
@@ -68,13 +72,16 @@ namespace SE_GymTrainer.tools
             connection.Close();
             return modelo;
         }
+        //Metodo para Registrar un Usuario
         public static void Register(string usr, string clv, string email, string peso, string altura)
         {
             nonQuery(construyeQuery(1, usr, clv, email, peso, altura));
             
         }
+        //Metodo para Activar un Usuario
         public static void Activate(string usr,string pass)
         {   nonQuery(construyeQuery(2, usr, pass)); }
+        //Metodo para Obtener los datos de un Usuario
         public static void llenarForm(TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4, TextBox txt5)
         {
             SqlConnection connection = new SqlConnection(sCnn);
@@ -91,15 +98,18 @@ namespace SE_GymTrainer.tools
             }
             connection.Close();
         }
+        //Metodo para Actualizar los datos de un Usuario
         public static void Update(string usr, string clv, string email, string peso, string altura)
         {
             nonQuery(construyeQuery(4, usr, clv, email, peso, altura));
         }
+        //Metodo para Desactivar un Usuario
         public static void Logout()
         {
             nonQuery(construyeQuery(5));
         }
-        public  static void  GetPeso(int peso)
+        //Metodo para Obtener el peso del usuario logeado 
+        public static void  GetPeso(int peso)
         {
             SqlConnection connection = new SqlConnection(sCnn);
             SqlCommand command = new SqlCommand(construyeQuery(6), connection);
@@ -112,6 +122,7 @@ namespace SE_GymTrainer.tools
             connection.Close();
             forms.Select.SetPeso(peso);
         }
+        //Metodo para Obtener la altura del usuario logeado
         public static void GetAltura(int altura)
         {
             SqlConnection connection = new SqlConnection(sCnn);
@@ -127,6 +138,7 @@ namespace SE_GymTrainer.tools
             forms.Select.SetAltura(altura);
         }
 
+        //Metodo para Obtener los ejercicios de la base de datos dependiendo del tipo de ejercicio
         public static void fillDataGridView(string tipo, DataGridView dgv)
         {
             string value = "";
