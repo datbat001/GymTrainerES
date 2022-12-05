@@ -1,0 +1,16 @@
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\bin\Debug\SE-GymTrainer.exe.config
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\bin\Debug\SE-GymTrainer.exe
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\bin\Debug\SE-GymTrainer.pdb
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE-GymTrainer.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE-GymTrainer.csproj.SuggestedBindingRedirects.cache
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.Form1.resources
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.Properties.Resources.resources
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE-GymTrainer.csproj.GenerateResource.cache
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE-GymTrainer.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE-GymTrainer.exe
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE-GymTrainer.pdb
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.Register.resources
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.Form2.resources
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.forms.Profile.resources
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.forms.Select.resources
+C:\Users\david\Desktop\SE-GymTrainer\SE-GymTrainer\obj\Debug\SE_GymTrainer.forms.tableResult.resources
